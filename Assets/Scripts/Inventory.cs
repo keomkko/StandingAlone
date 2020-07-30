@@ -11,8 +11,6 @@ public class Inventory : MonoBehaviour
 
     public GameObject go_Inventory;
 
-    private List<Item> inventoryItemList;
-
     private void Start()
     {
         itemDatabase = FindObjectOfType<ItemDatabase>();

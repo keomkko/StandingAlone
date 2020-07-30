@@ -50,12 +50,6 @@ public class PlayerAction : MonoBehaviour
             }
         }
 
-        //print(canMove);
-
-
-        print(attacking);
-
-
         if (curTime <= 0)
         {
             if (Input.GetKey(KeyCode.Z))
