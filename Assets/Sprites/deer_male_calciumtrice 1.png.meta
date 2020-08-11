@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: 1e627ee0ab7ad3143a324618d9f2c9b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 645863083566540759
+    second: deer_male_calciumtrice 1_0
+  - first:
+      213: -3582565347677995359
+    second: deer_male_calciumtrice 1_1
+  - first:
+      213: -3492338060827542746
+    second: deer_male_calciumtrice 1_2
+  - first:
+      213: -5093476766790091594
+    second: deer_male_calciumtrice 1_3
+  - first:
+      213: -2654646119837565072
+    second: deer_male_calciumtrice 1_4
+  - first:
+      213: -3435566993758898404
+    second: deer_male_calciumtrice 1_5
+  - first:
+      213: -1392032851778068297
+    second: deer_male_calciumtrice 1_6
+  - first:
+      213: 357118539618341798
+    second: deer_male_calciumtrice 1_7
+  - first:
+      213: -8592983510877843116
+    second: deer_male_calciumtrice 1_8
+  - first:
+      213: -8210625895994382834
+    second: deer_male_calciumtrice 1_9
+  - first:
+      213: -8787643495420379540
+    second: deer_male_calciumtrice 1_10
+  - first:
+      213: 3256690478139683025
+    second: deer_male_calciumtrice 1_11
+  - first:
+      213: 4855576259649939228
+    second: deer_male_calciumtrice 1_12
+  - first:
+      213: -8773762994182207152
+    second: deer_male_calciumtrice 1_13
+  - first:
+      213: 3740730366256993098
+    second: deer_male_calciumtrice 1_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 152
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7a5857d0196f800800000000000000
+      internalID: 645863083566540759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 336
+        width: 149
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae770b2ccb284ec0800000000000000
+      internalID: -3582565347677995359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_2
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 336
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b3cc07909b88fc0800000000000000
+      internalID: -3492338060827542746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_3
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 336
+        width: 149
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc75c3fdd55059b0800000000000000
+      internalID: -5093476766790091594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_4
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 336
+        width: 149
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f76be3b6dc82bd0800000000000000
+      internalID: -2654646119837565072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 152
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17b1f6850a6250d0800000000000000
+      internalID: -3435566993758898404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 176
+        width: 154
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b028122f718eace0800000000000000
+      internalID: -1392032851778068297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_7
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 176
+        width: 144
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a358a07b6db4f400800000000000000
+      internalID: 357118539618341798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_8
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 176
+        width: 154
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451565146079fb880800000000000000
+      internalID: -8592983510877843116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_9
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 176
+        width: 154
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06a1a5df3ffd0e80800000000000000
+      internalID: -8210625895994382834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 152
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e32b2ccc40c0680800000000000000
+      internalID: -8787643495420379540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_11
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 16
+        width: 154
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0b9e43cb6123d20800000000000000
+      internalID: 3256690478139683025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_12
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 31
+        width: 154
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c172148d1e8726340800000000000000
+      internalID: 4855576259649939228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_13
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 16
+        width: 164
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0594d4cca055d3680800000000000000
+      internalID: -8773762994182207152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deer_male_calciumtrice 1_14
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 36
+        width: 159
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43d349e27eb9e330800000000000000
+      internalID: 3740730366256993098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

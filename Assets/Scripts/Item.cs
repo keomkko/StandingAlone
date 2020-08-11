@@ -20,7 +20,7 @@ public class Item
         Etc
     }
 
-    public Item(int _itemID, string _itemName, string _itemExplain, ItemType _itemType, int _itemCount = 1)
+    public Item(int _itemID, string _itemName, string _itemExplain, ItemType _itemType, int _itemCount)
     {
         itemID = _itemID;
         itemName = _itemName;

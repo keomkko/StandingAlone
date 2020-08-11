@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     {
         TryOpenInventory();
 
-        if (Input.GetKeyDown(KeyCode.E)) //아이템 사용
+        if (Input.GetKeyDown(KeyCode.Q)) //아이템 사용
         {
             if (InventoryActivated == true)
             {

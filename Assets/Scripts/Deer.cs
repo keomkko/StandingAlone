@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Deer : AggressiveAnimal
 {
-    // Start is called before the first frame update
     private void Start()
     {
         hp = 200;

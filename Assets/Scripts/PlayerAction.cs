@@ -11,7 +11,7 @@ public class PlayerAction : MonoBehaviour
     public bool canDash = false;
     private bool attacking = false;
 
-
+    public LayerMask layerMask;
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -59,7 +59,7 @@ public class PlayerAction : MonoBehaviour
                 Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
                 foreach (Collider2D collider in collider2Ds)
                 {
-                    //Debug.Log(collider.tag);
+                    Debug.Log(collider.tag);
                     if (collider.tag == "Animal")
                     {
                         collider.GetComponent<Animal>().TakeDamage(PlayerStat.instance.player_atk);
@@ -80,7 +80,7 @@ public class PlayerAction : MonoBehaviour
         else
         {
             curTime -= Time.deltaTime;
-            if ((curTime <= 0.5f) && (curTime > 0) && (attacking == true))
+            if ((curTime <= 0.3f) && (curTime > 0) && (attacking == true))
             {
                 rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
                 attacking = false;
@@ -109,7 +109,7 @@ public class PlayerAction : MonoBehaviour
         if (canDash == true)
         {
             dash = speed * 1.5f;
-            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * Time.deltaTime, Input.GetAxisRaw("Vertical") * Time.deltaTime) * dash;
+            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * Time.deltaTime , Input.GetAxisRaw("Vertical") * Time.deltaTime) * dash;
 
             canDash = false;
         }

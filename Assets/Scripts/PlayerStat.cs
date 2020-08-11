@@ -41,15 +41,6 @@ public class PlayerStat : MonoBehaviour
                 hunger -= 0.05f;
             }
 
-            if (PlayerAction.instance.canDash == true)
-            {
-                thirst -= 0.05f;
-            }
-            else
-            {
-                thirst -= 0.04f;
-            }
-
             if (hunger >= 50f)
             {
                 if (hunger >= 100f)
@@ -63,6 +54,15 @@ public class PlayerStat : MonoBehaviour
             {
                 hunger = 0f;
                 hp -= 0.2f;
+            }
+
+            if (PlayerAction.instance.canDash == true)
+            {
+                thirst -= 0.05f;
+            }
+            else
+            {
+                thirst -= 0.04f;
             }
 
             if (thirst >= 50f)

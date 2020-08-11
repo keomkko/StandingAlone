@@ -1,58 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    protected string animalName;
     public int hp;
-
     public int itemID;
     public int _count;
-    protected Animator anim;
-    protected Rigidbody2D rigid;
-    protected BoxCollider2D boxCol;
+    protected Rigidbody2D rb;
+    public BoxCollider2D boxCol;
+    public LayerMask layerMask;
     private Vector3 vector;
+    protected Animator animator;
 
     protected int random_int;
-    protected string direction;
+    public string direction;
 
-    protected float speed = 0.1f;
-    protected int walkCount = 1;
-    protected int currentWalkCount;
+    public float speed = 0.025f;
+    protected int walkCount = 75; //동물 오브젝트 각각 walkCount 값 설정해주기
+    public int currentWalkCount;
+    public bool mobCanMove = true;
+    public bool hit = false;
 
-    protected bool mobCanMove = true;
-
-    public Queue<string> queue;
     protected float current_interMWT;
-    protected float inter_MoveWaitTime = 0.1f; //대기 시간
+    protected float inter_MoveWaitTime = 2f; //대기 시간
 
     public int probability;
     protected int a;
 
-    void Start()
+    private void Awake()
     {
-        queue = new Queue<string>();
-        current_interMWT = inter_MoveWaitTime;
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
-
-    void Update()
-    {
-        current_interMWT -= Time.deltaTime;
-
-        if (current_interMWT <= 0)
-        {
-            current_interMWT = inter_MoveWaitTime;
-
-            RandomDirection();
-
-            Move(direction);
-        }
-
-    }
-
     public void TakeDamage(int player_dmg)
     {
+        hit = true;
         probability = Random.Range(1, 100);
 
         hp -= player_dmg;
@@ -64,22 +49,15 @@ public class Animal : MonoBehaviour
         {
             _count = 2;
         }
-
-        if (hp <= 0)
-        {
-            Inventory.instance.GetAnItem(itemID, _count);
-            Destroy(this.gameObject);
-        }
     }
     protected void Move(string _dir)
     {
-        StartCoroutine(MoveCoroutine(_dir));
+        Coroutine coroutine = StartCoroutine(MoveCoroutine(_dir));
     }
-
     IEnumerator MoveCoroutine(string _dir)
     {
-        mobCanMove = false;
         vector.Set(0, 0, vector.z);
+
         switch (_dir)
         {
             case "UP":
@@ -89,44 +67,68 @@ public class Animal : MonoBehaviour
                 vector.y = -1f;
                 break;
             case "RIGHT":
-                vector.x = 1f;
+                vector.x = -1f;
                 break;
             case "LEFT":
                 vector.x = -1f;
                 break;
+            case "STOP":
+                vector.x = 0;
+                vector.y = 0;
+                break;
         }
         while (currentWalkCount < walkCount)
         {
+            DirX();
             transform.Translate(vector.x * speed, vector.y * speed, 0);
-
             currentWalkCount++;
-            yield return null;
+            if (direction != "STOP")
+            {
+                animator.SetBool("IsRunning", true);
+            }
+            else
+            {
+                animator.SetBool("IsRunning", false);
+            }
+            yield return new WaitForSeconds(0.02f);
         }
         currentWalkCount = 0;
-        mobCanMove = true;
+        animator.SetBool("IsRunning", false);
+        yield return null;
     }
-    private void RandomDirection()
+    protected void RandomDirection()
     {
         vector.Set(0, 0, vector.z);
-        random_int = Random.Range(0, 4);
+        random_int = Random.Range(0, 5);
         switch (random_int)
         {
             case 0:
-                vector.y = 1f;
                 direction = "UP";
                 break;
             case 1:
-                vector.y = -1f;
                 direction = "DOWN";
                 break;
             case 2:
-                vector.x = 1f;
                 direction = "RIGHT";
                 break;
             case 3:
-                vector.x = -1f;
                 direction = "LEFT";
                 break;
+            case 4:
+                direction = "STOP";
+                break;
+        }
+    }
+
+    void DirX()
+    {
+        if (direction == "RIGHT")
+        {
+            transform.localEulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (direction == "LEFT")
+        {
+            transform.localEulerAngles = new Vector3(0, 0, 0);
         }
     }
 
