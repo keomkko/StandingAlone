@@ -52,7 +52,6 @@ void Start()
         itemList.Add(new Item(10006, "코코넛", "허기를 10, 갈증을 30 채워준다.", Item.ItemType.Used, 0));
         itemList.Add(new Item(10007, "채소", "허기를 15, 갈증을 5 채워준다.", Item.ItemType.Used, 0));
         itemList.Add(new Item(20001, "목재", "제작 아이템으로 쓰인다.", Item.ItemType.Ingredient, 0));
-        itemList.Add(new Item(20002, "뼈", "공격력 상승", Item.ItemType.Ingredient, 0));
         itemList.Add(new Item(20003, "실", "제작 아이템으로 쓰인다.", Item.ItemType.Ingredient, 0));
         itemList.Add(new Item(20004, "돌", "제작 아이템으로 쓰인다.", Item.ItemType.Ingredient, 1));
         itemList.Add(new Item(30001, "돌", "공격력 35, 공격속도 0.8", Item.ItemType.Equipment, 1));

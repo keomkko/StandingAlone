@@ -31,8 +31,8 @@ public class DocileAnimal : Animal
     }
     public void Death()
     {
-        SpawnManager._instance.curCount--;
-        SpawnManager._instance.isSpawn[int.Parse(transform.parent.name) - 1] = false;
+        //SpawnManager._instance.curCount--;
+        //SpawnManager._instance.isSpawn[int.Parse(transform.parent.name) - 1] = false;
         Inventory.instance.GetAnItem(itemID, _count);
         Destroy(this.gameObject);
     }

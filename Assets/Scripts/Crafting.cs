@@ -67,73 +67,76 @@ public class Crafting : MonoBehaviour
     }
     private void Craft()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if (CraftingActivated)
         {
-            selectNum--;
-            if (selectNum <= 0)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                selectNum = 0;
+                selectNum--;
+                if (selectNum <= 0)
+                {
+                    selectNum = 0;
+                }
+                Debug.Log(selectNum);
             }
-            Debug.Log(selectNum);
-        }
-        else if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            selectNum++;
-            if (selectNum >= 4)
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                selectNum = 4;
+                selectNum++;
+                if (selectNum >= 4)
+                {
+                    selectNum = 4;
+                }
+                Debug.Log(selectNum);
             }
-            Debug.Log(selectNum);
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            switch (selectNum)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                case 0:
-                    if (Stone >= 1)
-                    {
-                        select[selectNum] = 1;
-                    }
-                    break;
-                case 1:
-                    if (Stone >= 10 && Wood >= 10)
-                    {
-                        select[selectNum] = 1;
-                        Stone -= 10;
-                        Wood -= 10;
-                    }
-                    break;
-                case 2:
-                    if (Stone >= 8 && Thread >= 2 && Wood >= 10)
-                    {
-                        select[selectNum] = 1;
-                        Stone -= 8;
-                        Thread -= 2;
-                        Wood -= 10;
-                    }
-                    break;
-                case 3:
-                    if (Stone >= 2 && Thread >= 4 && Wood >= 6)
-                    {
-                        select[selectNum] = 1;
-                        Stone -= 2;
-                        Thread -= 4;
-                        Wood -= 6;
-                    }
-                    break;
-                case 4:
-                    if(select[0] >= 1 && select[1] >= 1 && select[2] >= 1 && select[3] >= 1)
-                    {
-                        if(Stone >= 14 && Thread >= 4 && Wood >= 20)
+                switch (selectNum)
+                {
+                    case 0:
+                        if (Stone >= 1)
                         {
                             select[selectNum] = 1;
-                            Stone -= 14;
-                            Thread -= 4;
-                            Wood -= 20;
                         }
-                    }
-                    break;
+                        break;
+                    case 1:
+                        if (Stone >= 10 && Wood >= 10)
+                        {
+                            select[selectNum] = 1;
+                            Stone -= 10;
+                            Wood -= 10;
+                        }
+                        break;
+                    case 2:
+                        if (Stone >= 8 && Thread >= 2 && Wood >= 10)
+                        {
+                            select[selectNum] = 1;
+                            Stone -= 8;
+                            Thread -= 2;
+                            Wood -= 10;
+                        }
+                        break;
+                    case 3:
+                        if (Stone >= 2 && Thread >= 4 && Wood >= 6)
+                        {
+                            select[selectNum] = 1;
+                            Stone -= 2;
+                            Thread -= 4;
+                            Wood -= 6;
+                        }
+                        break;
+                    case 4:
+                        if (select[0] >= 1 && select[1] >= 1 && select[2] >= 1 && select[3] >= 1)
+                        {
+                            if (Stone >= 14 && Thread >= 4 && Wood >= 20)
+                            {
+                                select[selectNum] = 1;
+                                Stone -= 14;
+                                Thread -= 4;
+                                Wood -= 20;
+                            }
+                        }
+                        break;
+                }
             }
         }
     }

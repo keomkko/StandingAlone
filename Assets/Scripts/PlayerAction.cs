@@ -18,7 +18,7 @@ public class PlayerAction : MonoBehaviour
     private float curTime;
     private float coolTime = 1f;
     public Transform pos;
-    public Vector2 boxSize;
+    public Vector2 boxpos;
 
 
     private void Awake()
@@ -56,10 +56,14 @@ public class PlayerAction : MonoBehaviour
             {
                 attacking = true;
                 rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-                Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+                Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxpos, 0);
                 foreach (Collider2D collider in collider2Ds)
                 {
-                    Debug.Log(collider.tag);
+                    if (collider.tag != "Player")
+                    {
+                        Debug.Log(collider.tag);
+                    }
+
                     if (collider.tag == "Animal")
                     {
                         collider.GetComponent<Animal>().TakeDamage(PlayerStat.instance.player_atk);
@@ -101,7 +105,7 @@ public class PlayerAction : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(pos.position, boxSize);
+        Gizmos.DrawWireCube(pos.position, boxpos);
     }
 
     private void FixedUpdate()
@@ -109,7 +113,7 @@ public class PlayerAction : MonoBehaviour
         if (canDash == true)
         {
             dash = speed * 1.5f;
-            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * Time.deltaTime , Input.GetAxisRaw("Vertical") * Time.deltaTime) * dash;
+            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * Time.deltaTime, Input.GetAxisRaw("Vertical") * Time.deltaTime) * dash;
 
             canDash = false;
         }

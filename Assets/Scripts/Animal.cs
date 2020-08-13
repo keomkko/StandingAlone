@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
+    private SpawnManager spawnManager;
+
     public int hp;
     public int itemID;
     public int _count;
@@ -23,10 +25,10 @@ public class Animal : MonoBehaviour
     public int currentWalkCount;
     public bool mobCanMove = true;
     public bool hit = false;
-
+    
+    Coroutine coroutine;
     protected float current_interMWT;
     protected float inter_MoveWaitTime = 2f; //대기 시간
-
     public int probability;
     protected int a;
 
@@ -34,12 +36,12 @@ public class Animal : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
     }
     public void TakeDamage(int player_dmg)
     {
         hit = true;
         probability = Random.Range(1, 100);
-
         hp -= player_dmg;
         if (probability <= a)
         {
@@ -50,14 +52,21 @@ public class Animal : MonoBehaviour
             _count = 2;
         }
     }
+
+    
     protected void Move(string _dir)
     {
-        Coroutine coroutine = StartCoroutine(MoveCoroutine(_dir));
+         coroutine = StartCoroutine(MoveCoroutine(_dir));
     }
+
+    protected void Stop(string _dir)
+    {
+        StopCoroutine(MoveCoroutine(_dir));
+    }
+
     IEnumerator MoveCoroutine(string _dir)
     {
         vector.Set(0, 0, vector.z);
-
         switch (_dir)
         {
             case "UP":
@@ -94,7 +103,6 @@ public class Animal : MonoBehaviour
         }
         currentWalkCount = 0;
         animator.SetBool("IsRunning", false);
-        yield return null;
     }
     protected void RandomDirection()
     {
