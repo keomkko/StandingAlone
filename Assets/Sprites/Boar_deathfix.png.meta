@@ -1,0 +1,326 @@
+fileFormatVersion: 2
+guid: 5b2b1d4b0be9bf546b8a7002a2ee9697
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4852394762989432031
+    second: Boar_deathfix_0
+  - first:
+      213: 6576778107631824535
+    second: Boar_deathfix_1
+  - first:
+      213: -4790994453179252552
+    second: Boar_deathfix_2
+  - first:
+      213: -3170368265830213907
+    second: Boar_deathfix_3
+  - first:
+      213: 4106415905724434616
+    second: Boar_deathfix_4
+  - first:
+      213: -6467558979511663524
+    second: Boar_deathfix_5
+  - first:
+      213: -6602806438706405744
+    second: Boar_deathfix_6
+  - first:
+      213: 5147008726950926485
+    second: Boar_deathfix_7
+  - first:
+      213: 288512417261841190
+    second: Boar_deathfix_8
+  - first:
+      213: 4538158526913090974
+    second: Boar_deathfix_9
+  - first:
+      213: -4968576088451759080
+    second: Boar_deathfix_10
+  - first:
+      213: -7322096481811931209
+    second: Boar_deathfix_11
+  - first:
+      213: -1645206922549453889
+    second: Boar_deathfix_12
+  - first:
+      213: -7172519403355085500
+    second: Boar_deathfix_13
+  - first:
+      213: 2513860771048518429
+    second: Boar_deathfix_14
+  - first:
+      213: -6440292603613270144
+    second: Boar_deathfix_15
+  - first:
+      213: 7018216240774020253
+    second: Boar_deathfix_16
+  - first:
+      213: -4546395973873680531
+    second: Boar_deathfix_17
+  - first:
+      213: -7207925311626796413
+    second: Boar_deathfix_18
+  - first:
+      213: -2453960272800897494
+    second: Boar_deathfix_19
+  - first:
+      213: 5729345470093133350
+    second: Boar_deathfix_20
+  - first:
+      213: -521336044997979712
+    second: Boar_deathfix_21
+  - first:
+      213: -9198571784436166465
+    second: Boar_deathfix_22
+  - first:
+      213: -4087935039608352975
+    second: Boar_deathfix_23
+  - first:
+      213: -8038891851026427724
+    second: Boar_deathfix_24
+  - first:
+      213: 7826433617438213093
+    second: Boar_deathfix_25
+  - first:
+      213: 4722488513347745119
+    second: Boar_deathfix_26
+  - first:
+      213: 971862267409129394
+    second: Boar_deathfix_27
+  - first:
+      213: 8774691591591609732
+    second: Boar_deathfix_28
+  - first:
+      213: 5413167177688623613
+    second: Boar_deathfix_29
+  - first:
+      213: 2532803241593389987
+    second: Boar_deathfix_30
+  - first:
+      213: -5948929360530421716
+    second: Boar_deathfix_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boar_deathfix_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 312
+        width: 226
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1239c021ca4d8acb0800000000000000
+      internalID: -4852394762989432031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boar_deathfix_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 312
+        width: 226
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ee5f7f7d8654b50800000000000000
+      internalID: 6576778107631824535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boar_deathfix_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 312
+        width: 226
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b04269bde7f28db0800000000000000
+      internalID: -4790994453179252552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boar_deathfix_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 12
+        width: 229
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6d40c0cd69004d0800000000000000
+      internalID: -3170368265830213907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boar_deathfix_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 12
+        width: 230
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b808b0728becf830800000000000000
+      internalID: 4106415905724434616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boar_deathfix_5
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 12
+        width: 229
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54c15eef5d9e36a0800000000000000
+      internalID: -6467558979511663524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

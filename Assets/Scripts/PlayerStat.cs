@@ -1,26 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStat : MonoBehaviour
 {
     public static PlayerStat instance;
+    private Animator anim;
 
     public float hp = 150f;
     public float hunger = 100f;
     public float thirst = 100f;
-    public int player_atk = 40;
+    public int player_atk;
 
     private IEnumerator coroutine;
+    public bool isLive = true;
+
+    public Slider hpSlider;
+    public Slider hungerSlider;
+    public Slider thirstSlider;
+
+    public GameObject boat;
 
     void Start()
     {
-        coroutine = StatCoroutine();
+        boat.SetActive(false);
+        anim = GetComponent<Animator>();
         instance = this;
-
-
+        coroutine = StatCoroutine();
         StartCoroutine(coroutine);
+        player_atk = 10;
+
+        hpSlider.maxValue = 150f;
+        hungerSlider.maxValue = 100f;
+        thirstSlider.maxValue = 100f;
     }
 
     IEnumerator StatCoroutine()
@@ -90,11 +105,40 @@ public class PlayerStat : MonoBehaviour
 
     void Update()
     {
+        hpSlider.value = hp;
+        hungerSlider.value = hunger;
+        thirstSlider.value = thirst;
+
         if (hp <= 0f)
         {
             Debug.Log("사망");
             StopCoroutine(coroutine);
-            hp = 150;
+            PlayerAction.instance.speed = 0f;
+            Death();
         }
+        else if (DN.instance.dayCount >= 8)
+        {
+            StopCoroutine(coroutine);
+            anim.SetTrigger("Death");
+            PlayerAction.instance.speed = 0f;
+        }
+
+        if(Inventory.instance.IsClear)
+        {
+            StopCoroutine(coroutine);
+            PlayerAction.instance.speed = 0f;
+            gameObject.transform.position = new Vector3(0, -39, 0);
+            boat.SetActive(true);
+        }
+    }
+
+    private void Death()
+    {
+        if(isLive)
+        {
+            isLive = false;
+            anim.SetTrigger("Death");
+        }
+        
     }
 }

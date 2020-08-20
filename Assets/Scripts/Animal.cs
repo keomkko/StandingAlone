@@ -14,7 +14,7 @@ public class Animal : MonoBehaviour
     protected Rigidbody2D rb;
     public BoxCollider2D boxCol;
     public LayerMask layerMask;
-    private Vector3 vector;
+    protected Vector3 vector;
     protected Animator animator;
 
     protected int random_int;
@@ -25,18 +25,23 @@ public class Animal : MonoBehaviour
     public int currentWalkCount;
     public bool mobCanMove = true;
     public bool hit = false;
-    
-    Coroutine coroutine;
+    protected bool isDead = false;
+    protected bool DeathTrigger = false;
+
     protected float current_interMWT;
     protected float inter_MoveWaitTime = 2f; //대기 시간
     public int probability;
     protected int a;
 
+    public string DeathSound;
+    public string AttackSound;
+    protected AudioManager audioManager;
+
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
     }
     public void TakeDamage(int player_dmg)
     {
@@ -51,15 +56,45 @@ public class Animal : MonoBehaviour
         {
             _count = 2;
         }
-    }
 
-    
-    protected void Move(string _dir)
+        audioManager.Play(AttackSound);
+    }
+    public void Death()
     {
-         coroutine = StartCoroutine(MoveCoroutine(_dir));
+        audioManager.Play(DeathSound);
+        isDead = true;
+        StartCoroutine(DeathCoroutine());
     }
 
-    protected void Stop(string _dir)
+    IEnumerator DeathCoroutine()
+    {
+        if(!DeathTrigger)
+        {
+            DeathTrigger = true;
+            animator.SetTrigger("Death");
+        }
+        yield return new WaitForSeconds(1f);
+
+        for(int i = 0; i < SpawnManager._instance.objectSpawn.Count; i++)
+        {
+            if (SpawnManager._instance.objectSpawn[i].ObjectName == transform.parent.parent.name)
+            {
+                SpawnManager._instance.objectSpawn[i].curCount--;
+                SpawnManager._instance.objectSpawn[i].IsSpawn[int.Parse(transform.parent.name) - 1] = false;
+            }
+            yield return null;
+        }
+        Inventory.instance.GetAnItem(itemID, _count);
+        Destroy(gameObject);
+    }
+
+    public void Move(string _dir)
+    {
+        DirX();
+        StartCoroutine(MoveCoroutine(_dir));
+    }
+
+    public void Stop(string _dir)
     {
         StopCoroutine(MoveCoroutine(_dir));
     }
@@ -88,7 +123,6 @@ public class Animal : MonoBehaviour
         }
         while (currentWalkCount < walkCount)
         {
-            DirX();
             transform.Translate(vector.x * speed, vector.y * speed, 0);
             currentWalkCount++;
             if (direction != "STOP")
@@ -132,12 +166,14 @@ public class Animal : MonoBehaviour
     {
         if (direction == "RIGHT")
         {
-            transform.localEulerAngles = new Vector3(0, 180, 0);
+            transform.eulerAngles = new Vector3(0, 180f, 0);
+            
         }
         else if (direction == "LEFT")
         {
-            transform.localEulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
 }

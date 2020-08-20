@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7920785641035165581}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4756772096112833567}
   - component: {fileID: 2037779809068515678}
   - component: {fileID: 7549216084421355918}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Deer
   m_TagString: Animal
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4756772096112833568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 7920785641035165581}
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 645863083566540759, guid: 1e627ee0ab7ad3143a324618d9f2c9b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -207,9 +207,11 @@ MonoBehaviour:
   mobCanMove: 1
   hit: 0
   probability: 0
+  DeathSound: Death Deer
+  AttackSound: Attack Animal
   atkDamage: 0
   attackDelay: 0
   attackCooltime: 2
-  player: {fileID: 6219179288017786947, guid: 5950f5a0a6a5cb447bb9eae3912b0a9b, type: 3}
+  follow: 0
   boxpos: {fileID: 7920785641035165581}
   boxSize: {x: 0.8, y: 0.8}

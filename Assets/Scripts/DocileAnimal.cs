@@ -13,7 +13,11 @@ public class DocileAnimal : Animal
     {
         if (hp <= 0)
         {
-            Death();
+            if (!isDead)
+            {
+                Death();
+            }
+            speed = 0;
         }
 
         current_interMWT -= Time.deltaTime;
@@ -26,14 +30,5 @@ public class DocileAnimal : Animal
 
             Move(direction);
         }
-
-        
-    }
-    public void Death()
-    {
-        //SpawnManager._instance.curCount--;
-        //SpawnManager._instance.isSpawn[int.Parse(transform.parent.name) - 1] = false;
-        Inventory.instance.GetAnItem(itemID, _count);
-        Destroy(this.gameObject);
     }
 }
